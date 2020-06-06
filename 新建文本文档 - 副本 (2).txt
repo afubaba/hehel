@@ -1,0 +1,13 @@
+1.安装Setup-Subversion-1.8.17
+
+2.任意dos下绑定一个本地目录仓库svn_test
+dod命令：svnadmin create C:\\svn_test
+
+
+3.
+命令启动：svnserve -d -r C:\\svn_test
+服务启动丶停止和删除
+创建一个服务：sc create SvnService binpath= "C:\Program Files (x86)\Subversion\bin\svnserve.exe --service -r C:\\svn_test"  start= auto depend= Tcpip
+sc strart svnservice
+svn stop  svnservice
+svn delete svnservice
